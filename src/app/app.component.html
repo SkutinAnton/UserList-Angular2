@@ -1,0 +1,40 @@
+<h1>Список пользователей</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Имя</th>
+        <th>Логин</th>
+        <th>Почта</th>
+        <th>Статус</th>
+        <th colspan='2'><input type="button" value="Добавить" class="btn" (click)="addUser()"></th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.login }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.status }}</td>
+        <td><input type="button" value="Изменить" (click)="editUser(user)" class="btn"></td>
+        <td><input type="button" value="Удалить" (click)="deleteUser(user)" class="btn"></td>
+    </tr>
+    <tr *ngIf="createPlace">
+        <td></td>
+        <td>
+            <input class="edit" type="text" [(ngModel)]="editedUser.name">
+        </td>
+        <td>
+            <input class="edit" type="text" [(ngModel)]="editedUser.login">
+        </td>
+        <td>
+            <input class="edit" type="text" [(ngModel)]="editedUser.email">
+        </td>
+        <td>
+            <input class="edit" type="text" [(ngModel)]="editedUser.status">
+        </td>
+        <td>
+            <input type="button" value="Сохранить" (click)="saveUser()" class="btn" *ngIf="saveButton">
+            <input type="button" value="Обновить" (click)="changeUser()" class="btn" *ngIf="changeButton">
+        </td>
+        <td><input type="button" value="Отмена" (click)="cancel()" class="btn"></td>
+    </tr>
+</table>

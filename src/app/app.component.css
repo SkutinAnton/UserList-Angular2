@@ -1,0 +1,56 @@
+h1 {
+  margin-bottom: 30px;
+  color: #33338a;
+  text-align: center;
+  font-weight: 100;
+}
+
+table {
+  font-size: 14px;
+  border-collapse: collapse;
+  text-align: center;
+  width: 1300px
+}
+
+th {
+  font-weight: normal;
+  color: #039;
+  padding: 10px 15px;
+}
+
+td {
+  color: #669;
+  border-top: 1px solid #e8edff;
+  padding: 10px 15px;
+  height: 50px;
+  transition: 0.5s;
+}
+
+tr:hover td {
+  background: #e8edff;
+  cursor: pointer;
+}
+
+.btn {
+ background-color: #fff;
+ border: 1px solid #039;
+ padding: 10px;
+ border-radius: 5px;
+ color: #039;
+ transition: 0.4s;
+ width: 100%;
+}
+
+.btn:hover {
+  background: #039;
+  cursor: pointer;
+  color: white;
+ }
+
+ .edit {
+  border: 1px solid #bac5dc;
+  border-radius: 10px;
+  text-align: center;
+  height: 30px;
+  color: #039;
+}
