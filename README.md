@@ -1,27 +1,15 @@
-# AngularTest
+# Список пользователей на Angular2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+Данный список пользователей реализован на Angular2. Список загружается с сервера в таблицу пользователей. Также реализована функция добавления нового пользователя, функции удаления и изменения пользователя.
 
-## Development server
+## Запуск API [Deployd] (http://deployd.com) (Сервер)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Для запуска сервера (со списком пользователей) нужно выполнить следующее: открыть консоль и выполнить команду `npm install deployd-cli -g` и установить [mongodb] (https://www.mongodb.com/download-center?jmp=nav#community) для Windows, OSX или Linux. После чего в консоле командой `cd` перейти в папку "base" которая находится в папке "UserList-Angular2" и выполнить команду `dpd -d`. После чего станет доступен сервер с базой по указанному пути `http://localhost:2403`, редактирование базы `http://localhost:2403/dashboard/users` и сам список откуда загружаются пользователи `http://localhost:2403/users`.
 
-## Code scaffolding
+## Если не запускается `dpd -d` 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Нужно запустить команду `dpd --mongod ...` где вместо "..." указать путь до файла "mongod.exe", у меня этот путь выглядит так "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe".
 
-## Build
+## Запуск приложения
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Для запуска в консоле нужно зайти в папку "UserList-Angular2" командой `cd`, после этого запустить команду `ng serve -o`. В браузере откроется окно с указанным путем `http://localhost:4200/`.
